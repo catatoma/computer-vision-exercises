@@ -62,6 +62,10 @@ A simple object-detection pipeline combining several image-processing techniques
 6. Contour detection
 7. Object visualization
 
+### Skin Detection using HSV Color Space
+
+Segments regions corresponding to human skin using HSV color thresholding. The resulting mask is refined using morphological opening, dilation, and erosion. Contours are then detected and regions above a specified area threshold are highlighted with bounding boxes.
+
 ## Technologies
 
 * Python
