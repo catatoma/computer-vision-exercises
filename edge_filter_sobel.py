@@ -1,18 +1,18 @@
 #necessary imports
 import numpy as np
-import convolution_fromscratch
+import convolution_from_scratch
 import matplotlib.pyplot as plt
 
 def sobelFilt(image):
     #here are obtained the vertical edges
     xrespect = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])
-    newimagex = convolution_fromscratch.conv(image,xrespect)
+    newimagex = convolution_from_scratch.conv(image,xrespect)
     plt.imshow(newimagex, cmap='gray')
     plt.show()
 
     # here are obtained the horizontal edges
     yrespect = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
-    newimagey = convolution_fromscratch.conv(image, yrespect)
+    newimagey = convolution_from_scratch.conv(image, yrespect)
     plt.imshow(newimagey, cmap='gray')
     plt.show()
 

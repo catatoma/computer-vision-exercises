@@ -1,16 +1,16 @@
-import boxfilter
-import convolution_fromscratch
-import gaussianfilter
-import edgetfilterSobel
+import box_filter
+import convolution_from_scratch
+import gaussian_filter
+import edge_filter_sobel
 
 import cv2
 import matplotlib.pyplot as plt
 
 #different dimensions for boxfilter: 3,7,9,15,25,51
-kernel = boxfilter.boxfilter(25)
+kernel = box_filter.boxfilter(25)
 
 #different parameters for gaussian filter: (1,3), (1,9), (1,11), (7,11),(25,51)
-kernel_2 = gaussianfilter.gaussfilt(30,53)
+kernel_2 = gaussian_filter.gaussfilt(30,53)
 
 
 #try for each image
@@ -28,7 +28,7 @@ plt.show()
 
 #newimage_2 = convolution_fromscratch.conv(image,kernel_2)
 
-newimage_3 = edgetfilterSobel.sobelFilt(image)
+newimage_3 = edge_filter_sobel.sobelFilt(image)
 
 #show the image after filtering
 plt.imshow(newimage_3, cmap ='gray')
